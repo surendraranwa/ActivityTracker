@@ -1,6 +1,8 @@
 import React from 'react';
 import './Home.css';
+import { useNavigate } from 'react-router-dom';
 function Home() {
+   const navigate = useNavigate();
    return (
       <>
          <div className='conatnier'>
@@ -13,7 +15,7 @@ function Home() {
                   <img src="/assets/images/jobs.png" alt='Images' />
                   Job Application
                </div>
-               <div className='tabs-home-tab'>
+               <div className='tabs-home-tab' onClick={()=> navigate("/resume-data")}>
                   <img src="/assets/images/resume.png" alt='Images' />
                   Resume Data
                </div>
